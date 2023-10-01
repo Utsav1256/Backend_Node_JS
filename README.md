@@ -63,3 +63,113 @@ https  - we cannot read that message bcz thiat message is encrypted
 - if some body is connected to that port, to hum uss port ko use nahi kar sakte
 - random numbers like 3000, 1234
 - wo no. hum apne mann se rakh sakte hai.
+
+# Episode 2
+## What is backend ?
+Backend devloper wo banda hai joki server aur database program karta hai.
+## Why backend ?
+to amke websites more usable and purposefull for the audience, to make website dynamic (dynamic matlab alag alag users ko aap alag alag deta dikha sakte ho).
+## Why not frintend alone ?
+With frontend websites are static and they are not of much use.
+
+## What do we need ?
+node js, mongodb, mongoose js, express js
+
+## What should we make to hit big companies??
+
+
+## Install
+install ka matlab hota hai aapke laptop / computer / tablet, etc mein files ko copy karna.
+
+- c-drive me files ko copy karna after download of exe files  is called installation.
+
+## import and export in js
+
+script.js
+```js
+var a = 12;
+module.exports = d;
+```
+script2.js
+```js
+var d = require('./script'); //jise export kiya wo require nahi karte hai,  jsi file se export kiya hai wo require karte hai
+console.log(d);
+```
+
+jaha par aapka data hota hai waha se hota hai export
+jaha pe use karna hota hai waha karna hota hai import
+
+script.js
+```js
+var a = 12;
+var b = 1334;
+module.exports = a;
+module.exports = b;
+```
+
+- galat hai kyu??
+- kyuki ek file ek hi cheej export kar sakti hai.
+
+
+script.js
+```js
+var a = 12;
+var b = 1334;
+module.exports = {first: a, second: b};
+```
+- aise karte hai
+
+script2.js
+```js
+var data = require("./script")
+```
+- data me woaayega jo export kiya hai -> wo object ({first: a, second: b}).
+
+- Node js hai khoob sara C++ ka code jo ki liya gaya hai chrome browser ke v8 engine ke code se,
+aur iss c++ code jisko liya gaya usse wrap kar diya gaya js code se 
+and ye hume allow karta hai ki hum js code likhen aur ye(js wrapper) js code accept karega and c++ ke basis par aapko ek server environment bana kar dega, 
+par sirf tab tak jab tak aapka node(v8 engine + js wrapper) chalu hai.
+
+## to run the code (using node)
+
+- do this: 
+node .\script.js
+
+- npm init karne ki koi jarurat nahi hai run karne ke liye
+
+## npm
+- npm ek jagah hai jaha par khoob saare packages milte hai
+- bani banaai cheejein / features kehlaate hai packages
+
+- text to audio kaise karuuuuu??
+- npm package for text to audio include karle re baba.
+
+npm => packages ka playstore
+packages => files of code\
+
+jab aap node install karte ho to node ke saath npm bhi install ho jata hai.
+to check `npm -v` (in cmd)
+
+`npm i package_name`
+
+## express
+- its an npm package
+- express ek framework hai for node.js
+- use case :
+- mainly for routing
+- routing => 
+https://www.facebook.com/profile
+
+`/profile` -> route
+
+alag alag route pe alag alag pages dikha paye, usko routing kehte hai
+
+## routing methods -> GET POST PUT PATCH DELETE
+
+jab bhi aap kuchh search karenge / form fill karenge / ya koi aisa route open karenge,
+jisme aap chate hai ki URL pe data dikh jaye koi problem nahi hai,
+aise route ko get route kehte hai.
+- lekin jab aap chahte hai, ki aap apna email lekhe, aor password likhe to url pe data show na ho,
+aise route kohum POST route kehete hai.
+- GET route me data url me dikhta hai.
+- POST route me data url me nahi dikhta hai.
