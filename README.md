@@ -199,3 +199,26 @@ nodemon .\script.js
 - cannot loaded because running scripts is dosabled on the system.
 - to resolve:
 npx nodemon .\script.js
+
+## middleware
+
+- server par request aane ke baad aur route tak pahuchne se pehle jo process hota hai uska naam hai middleware
+
+```js
+app.use(function(req, res, next) {
+    console.log("hello from middleware);
+    next();
+})
+```
+- middleware ek aisa function hai jo kisi bhi route se pehle chalta hai,
+- jiska matlab aapka route chalne se pehle agar aap koi kaam kareana chate ho to middleware ka upyog kiya ja sakta hai
+- route pe chale se print karo chala
+- route pe chale se hits counter ki value badhao
+- iska matlab route chalne se pehle jo chalega wo hai middleware
+
+- sirf ek dikkat hai, agar hamara middelware chal gaya to rewuest jaam ho jati hai aur route tak nahi ja pati
+- to iske liye hume push karna hota hai
+- by doint -> `next()`
+
+Q) me kitne middle ware bana sakta hoon ?
+-> kitne bhi.
