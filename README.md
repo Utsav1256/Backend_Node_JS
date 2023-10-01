@@ -173,3 +173,29 @@ aise route ko get route kehte hai.
 aise route kohum POST route kehete hai.
 - GET route me data url me dikhta hai.
 - POST route me data url me nahi dikhta hai.
+
+```js
+const express = require('express');
+const app = express();
+
+app.get('/profile', function(req, res) {
+ res.send('hey');
+})
+
+app.listen(3000);
+```
+- node iss file ko chalane aayega
+- aur use pata chalega achchha express keh raha hai ki server banao, aur 3000 port par listen karo.
+
+http://localhost:3000/ jake dekho 
+
+## nodemon
+
+npm i nodemon -g
+
+nodemon .\script.js
+
+- kisi laptop me ho sakta hai ye error aaye
+- cannot loaded because running scripts is dosabled on the system.
+- to resolve:
+npx nodemon .\script.js
